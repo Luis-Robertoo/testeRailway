@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteDockerRailway", "TesteDockerRailway\TesteDockerRailway.csproj", "{30119B12-4998-416C-A812-1E19CDACCFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30119B12-4998-416C-A812-1E19CDACCFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30119B12-4998-416C-A812-1E19CDACCFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30119B12-4998-416C-A812-1E19CDACCFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30119B12-4998-416C-A812-1E19CDACCFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAA1D1D8-8805-48BC-B446-BED085FDE45C}
+	EndGlobalSection
+EndGlobal
