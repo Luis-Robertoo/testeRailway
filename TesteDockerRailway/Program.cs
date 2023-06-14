@@ -17,7 +17,7 @@ bool parou = parar is null ? false : parar.Equals("true") ? true : false;
 while ((max is -1 || counter < max) && !parou && (variavel != null && Convert.ToInt32(variavel) > counter))
 {
     Console.WriteLine(variavel);
-
+    Console.WriteLine(Environment.GetEnvironmentVariable("PORT"));
     Console.WriteLine($"Counter: {++counter}");
     await Task.Delay(TimeSpan.FromMilliseconds(1_000));
 }
