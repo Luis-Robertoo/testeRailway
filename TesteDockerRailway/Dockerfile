@@ -1,6 +1,9 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /App
 
+ENV PORTA = 80
+ENV PARAR = true
+
 # Copy everything
 COPY . ./
 # Restore as distinct layers
