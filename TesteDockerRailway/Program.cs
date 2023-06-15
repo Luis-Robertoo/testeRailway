@@ -19,7 +19,7 @@ Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=
 
 var porta = Environment.GetEnvironmentVariable("PORT");
 
-Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://+:{porta}");
+Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://0.0.0.0:{porta}");
 
 var builder = WebApplication.CreateBuilder(args);
 
