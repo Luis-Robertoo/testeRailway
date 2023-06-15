@@ -14,11 +14,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 WORKDIR /app
 COPY --from=build /app ./
 
-ARG PORT
-ENV PORT ${PORT}
-ENV ASPNETCORE_URLS=http://+:${PORT}
-
-EXPOSE ${PORT}
-
 ENTRYPOINT ["dotnet", "TesteDockerRailway.dll"]
 
