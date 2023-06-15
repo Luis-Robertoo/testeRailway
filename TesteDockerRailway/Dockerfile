@@ -1,18 +1,22 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
-WORKDIR /App
 
-ENV PORTA = 80
-ENV PARAR = true
 
-# Copy everything
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /app
+
+# copy csproj and restore as distinct layers
 COPY . ./
-# Restore as distinct layers
 RUN dotnet restore
-# Build and publish a release
-RUN dotnet publish -c Release -o out
+RUN dotnet publish -c release -o /app --no-restore
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
-WORKDIR /App
-COPY --from=build-env /App/out .
+# final stage/image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
+WORKDIR /app
+COPY --from=build /app ./
+
+ENV ASPNETCORE_URLS=http://+:5001
+
+EXPOSE 5001
+
 ENTRYPOINT ["dotnet", "TesteDockerRailway.dll"]
+

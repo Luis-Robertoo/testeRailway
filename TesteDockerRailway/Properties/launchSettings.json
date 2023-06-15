@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "TesteDockerRailway": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PORTA": "80",
+        "PORT" : " 5001"
+      },
+      "applicationUrl": "https://localhost:57137;http://localhost:57138"
+    }
+  }
+}

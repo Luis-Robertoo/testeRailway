@@ -1,23 +1,33 @@
 ﻿
-
+using System.Collections;
 
 Console.WriteLine("Hello, World!");
+Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
+Console.WriteLine("variavel PORTA: " + Environment.GetEnvironmentVariable("PORTA"));
+Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
+Console.WriteLine("variavel PARAR: " + Environment.GetEnvironmentVariable("PARAR"));
+Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
+Console.WriteLine("variavel PORT: " + Environment.GetEnvironmentVariable("PORT"));
 
-var counter = 0;
-var variavel = Environment.GetEnvironmentVariable("PORTA");
 
-variavel = variavel is null ? "100" : variavel.ToString();
+var variaveis = Environment.GetEnvironmentVariables();
 
-var parar = Environment.GetEnvironmentVariable("PARAR");
 
-var max = args.Length is not 0 ? Convert.ToInt32(args[0]) : -1;
-
-bool parou = parar is null ? false : parar.Equals("true") ? true : false;
-
-while ((max is -1 || counter < max) && !parou && (variavel != null && Convert.ToInt32(variavel) > counter))
+foreach (DictionaryEntry variavel in variaveis)
 {
-    Console.WriteLine(variavel);
-    Console.WriteLine(Environment.GetEnvironmentVariable("PORT"));
-    Console.WriteLine($"Counter: {++counter}");
-    await Task.Delay(TimeSpan.FromMilliseconds(1_000));
+    Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
+    Console.WriteLine($"Nome: {variavel.Key} -=- Valor: {variavel.Value}");
 }
+
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+
+var app = builder.Build();
+
+
+app.MapGet("/", () => "Hello World!");
+
+app.Run();
+    
