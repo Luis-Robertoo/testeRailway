@@ -16,10 +16,12 @@ foreach (DictionaryEntry variavel in variaveis)
 }
 
 Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
+if (Environment.GetEnvironmentVariable("HOSTNAME") == "railway") 
+{
+    var porta = Environment.GetEnvironmentVariable("PORT");
+    Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://0.0.0.0:{porta}");
+}
 
-var porta = Environment.GetEnvironmentVariable("PORT");
-
-Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://0.0.0.0:{porta}");
 
 var builder = WebApplication.CreateBuilder(args);
 
