@@ -1,13 +1,9 @@
 ﻿
 using System.Collections;
-
+Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
 Console.WriteLine("Hello, World!");
 Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
-Console.WriteLine("variavel PORTA: " + Environment.GetEnvironmentVariable("PORTA"));
-Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
-Console.WriteLine("variavel PARAR: " + Environment.GetEnvironmentVariable("PARAR"));
-Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
-Console.WriteLine("variavel PORT: " + Environment.GetEnvironmentVariable("PORT"));
+
 
 
 var variaveis = Environment.GetEnvironmentVariables();
@@ -19,7 +15,7 @@ foreach (DictionaryEntry variavel in variaveis)
     Console.WriteLine($"Nome: {variavel.Key} -=- Valor: {variavel.Value}");
 }
 
-
+Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
 
 var builder = WebApplication.CreateBuilder(args);
 
