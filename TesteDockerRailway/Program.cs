@@ -8,11 +8,12 @@ Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=
 
 var variaveis = Environment.GetEnvironmentVariables();
 
+//coemntei aqui
 
 foreach (DictionaryEntry variavel in variaveis)
 {
     Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
-    Console.WriteLine($"Nome: {variavel.Key} -=- Valor: {variavel.Value}");
+    Console.WriteLine($"Nome: {variavel.Key} ======= Valor: {variavel.Value}");
 }
 
 Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
