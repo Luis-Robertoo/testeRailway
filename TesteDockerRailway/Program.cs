@@ -13,7 +13,7 @@ var variaveis = Environment.GetEnvironmentVariables();
 foreach (DictionaryEntry variavel in variaveis)
 {
     Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
-    Console.WriteLine($"Nome: {variavel.Key} ======= Valor: {variavel.Value});
+    Console.WriteLine($"Nome: {variavel.Key} ======= Valor: {variavel.Value}");
 }
 
 Console.WriteLine("-=-=-=-=-=-=-=--=-==--=-=-==--=-==-=--=-=-=-=-=--=-=-=-=----=-=-=");
